@@ -1,11 +1,6 @@
 import React, { Fragment } from 'react';
 
-/**
- * @param {string} string
- * @param {JSX.Element} [divider = <br/>]
- * @returns {string|unknown[]|*}
- */
-export function nl2br(string, divider = <br/>) {
+export function nl2br(string) {
     // if it is not a string
     if (typeof string !== 'string') {
         return string;
@@ -21,7 +16,7 @@ export function nl2br(string, divider = <br/>) {
 
     return fragments.map((line, i) => {
         // in the last fragment not display <br>
-        const breakPoint = i + 1 < fragmentsCount ? divider : false;
+        const breakPoint = i + 1 < fragmentsCount ? <br/> : false;
 
         return <Fragment key={ i }>{ line }{ breakPoint }</Fragment>;
     });
