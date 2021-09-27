@@ -14,10 +14,16 @@ export function nl2br(string) {
     const fragments = string.split('\n');
     const fragmentsCount = fragments.length;
 
-    return fragments.map((line, i) => {
-        // in the last fragment not display <br>
-        const breakPoint = i + 1 < fragmentsCount ? <br/> : false;
+    return fragments.reduce((res, line, i) => {
+        if (line !== '') {
+            res.push(<Fragment key={ i }>{ line }</Fragment>);
+        }
 
-        return <Fragment key={ i }>{ line }{ breakPoint }</Fragment>;
-    });
+        // in the last fragment not display <br>
+        if (i + 1 !== fragmentsCount) {
+            res.push(<br key={ `${ i }br` }/>);
+        }
+
+        return res;
+    }, []);
 }
