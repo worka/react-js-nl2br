@@ -1,0 +1,22 @@
+{
+    "name": "react-js-nl2br",
+    "version": "1.0.0",
+    "description": "Replacing newline char with <br> in React",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "worka",
+    "license": "ISC",
+    "keywords": [
+        "react",
+        "nl2br"
+    ],
+    "devDependencies": {
+        "@types/react": "^17.0.24"
+    },
+    "peerDependencies": {
+        "react": "^16.14.0 || ^17.0.0"
+    }
+}
