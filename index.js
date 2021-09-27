@@ -16,12 +16,12 @@ export function nl2br(string) {
 
     return fragments.reduce((res, line, i) => {
         if (line !== '') {
-            res.push(<Fragment key={ i }>{ line }</Fragment>);
+            res.push(React.createElement(Fragment, { key: i, children: line }));
         }
 
         // in the last fragment not display <br>
         if (i + 1 !== fragmentsCount) {
-            res.push(<br key={ `${ i }br` }/>);
+            res.push(React.createElement('br', { key: `${ i }br` }));
         }
 
         return res;
