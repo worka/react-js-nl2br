@@ -1,5 +1,10 @@
 import React, { Fragment } from 'react';
 
+/**
+ * @param {string} string
+ * @param {JSX.Element} [divider = <br/>]
+ * @returns {string|unknown[]|*}
+ */
 export function nl2br(string, divider = <br/>) {
     // if it is not a string
     if (typeof string !== 'string') {
