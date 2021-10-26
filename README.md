@@ -28,3 +28,5 @@ function Component({ text }) {
     );
 }
 ```
+
+Do not rush to use this plugin, perhaps this CSS property will help you solve the problem: https://developer.mozilla.org/en-US/docs/Web/CSS/white-space 😉
