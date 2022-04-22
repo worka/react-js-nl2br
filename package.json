@@ -1,6 +1,6 @@
 {
     "name": "react-js-nl2br",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Replacing newline char with <br> in React",
     "main": "index.js",
     "types": "index.d.ts",
